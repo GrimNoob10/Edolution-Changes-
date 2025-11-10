@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { AboutUs } from '@/components/AboutUs';
+import { Mission } from '@/components/Mission';
+import { FocusAreas } from '@/components/FocusAreas';
+import { Principles } from '@/components/Principles';
+import { Team } from '@/components/Team';
+import { Footer } from '@/components/Footer';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="flex flex-col items-stretch pb-[1406px] max-md:pb-[100px]">
+      <div className="bg-white flex w-full flex-col overflow-hidden items-stretch max-md:max-w-full">
+        <div className="bg-white flex w-full flex-col items-stretch max-md:max-w-full">
+          <Header />
+          
+          <main className="px-[34px] max-md:px-5">
+            <Hero />
+          </main>
+        </div>
+        
+        <AboutUs />
+        <Mission />
+        <FocusAreas />
+        <Principles />
+        <Team />
+        <Footer />
       </div>
+      
+      <div className="z-10 mt-[-2180px] w-0 shrink-0 h-[774px] border-[rgba(105,142,69,0.1)] border-solid border-2 max-md:mt-[-200px]" />
     </div>
   );
 };
