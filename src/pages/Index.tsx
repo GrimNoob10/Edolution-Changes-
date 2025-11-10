@@ -10,7 +10,7 @@ import { Footer } from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
-    <div className="flex flex-col items-stretch pb-[1406px] max-md:pb-[100px]">
+    <div className="flex flex-col items-stretch ">
       <div className="bg-white flex w-full flex-col overflow-hidden items-stretch max-md:max-w-full">
         <div className="bg-white flex w-full flex-col items-stretch max-md:max-w-full">
           <Header />
@@ -28,7 +28,7 @@ const Index: React.FC = () => {
         <Footer />
       </div>
       
-      <div className="z-10 mt-[-2180px] w-0 shrink-0 h-[774px] border-[rgba(105,142,69,0.1)] border-solid border-2 max-md:mt-[-200px]" />
+     
     </div>
   );
 };
