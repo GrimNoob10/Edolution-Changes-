@@ -103,3 +103,80 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+/* keep the light grid background + zigzag you already added if you want */
+.services-grid-bg{
+  background-image:
+    linear-gradient(#EEF3ED 1px, transparent 1px),
+    linear-gradient(90deg, #EEF3ED 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px;
+  background-position: center;
+}
+
+/* CRITICAL: neutralize inline styles from the provided decoration SVGs */
+.service-decoration-pattern{
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* optional: ensure the small icons don't get overridden */
+.service-icon{
+  position: static !important; /* we place them in a positioned wrapper */
+  left: auto !important;
+  top: auto !important;
+  width: 38px !important;
+  height: 38px !important;
+}
+
+/* tiny zigzag after "Services" (unchanged) */
+.zigzag-acc::after{
+  content:"";
+  display:block;
+  width:28px;height:18px;
+  background:
+    linear-gradient(-45deg,#197B55 12px,transparent 12px) 0 0/14px 9px,
+    linear-gradient( 45deg,#197B55 12px,transparent 12px) 14px 9px/14px 9px;
+  transform:rotate(8deg);
+}
+.services-grid-bg {
+  background: url('/your-grid-bg.svg'); /* Use your grid bg image from screenshot */
+  background-size: cover;
+}
+
+.section-decoration {
+  vertical-align: middle;
+}
+
+.service-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.service-decoration-pattern {
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.zigzag-acc {
+  display: block;
+  width: 34px;
+  height: 20px;
+}
+html {
+        overflow-x: hidden !important;
+        width: 100%;
+        position: relative;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        width: 100%;
+        position: relative;
+        overscroll-behavior-x: none;
+        -webkit-overflow-scrolling: touch;
+    }

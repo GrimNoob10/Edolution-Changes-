@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 type Principle = { title: string; desc: string; img: string };
 
@@ -27,10 +28,9 @@ const PRINCIPLES: Principle[] = [
 
 export const Principles: React.FC = () => {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* faint grid backdrop */}
+    <section className="relative w-full overflow-hidden bg-white py-16">
+      {/* Faint grid backdrop */}
       <div
-        aria-hidden
         className="pointer-events-none absolute inset-0 bg-[length:88px_88px]"
         style={{
           backgroundImage:
@@ -38,106 +38,107 @@ export const Principles: React.FC = () => {
         }}
       />
 
-      <h2 className="relative z-10 mt-[82px] text-center text-[40px] font-semibold text-[rgba(37,37,37,1)] max-md:mt-10">
+      <h2 className="relative z-10 text-center text-[40px] font-semibold text-[#252525] max-md:text-3xl">
         Our <span className="font-bold text-[#197B55]">Principles</span>
       </h2>
 
-      {/* === Decorative dashed paths + yellow arrows (md+) === */}
-      <svg
-        className="pointer-events-none absolute inset-x-0 top-[210px] z-0 hidden md:block"
-        viewBox="0 0 1440 420"
-        preserveAspectRatio="none"
-      >
-        {/* 1) Top arc between card 1 & 2 */}
-        <path
-          d="M180 150 C 300 80, 440 80, 560 150"
-          stroke="#1E4C82"
-          strokeWidth="3"
-          strokeDasharray="6 10"
-          fill="none"
-          opacity="0.7"
+      {/* Decorative background arrows and paths - exact positioning */}
+      <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+        {/* Arrow 1: Between cards 1 & 2 - using your SVG */}
+        <img 
+          src="/arrow1.png" 
+          alt=""
+          className="absolute left-[22%] top-[124px] md:mt-80px md:h-[80px] md:ml-40px md:w-[160px]"
         />
-        {/* yellow chevron on that arc */}
-        <g transform="translate(540,150) rotate(-20)">
-          <path d="M0 0 l-18 -10 l0 20 z" fill="#FAB029" />
-          <path d="M-22 0 l-18 -10 l0 20 z" fill="#FAB029" />
-        </g>
 
-        {/* 2) Bottom arc between card 2 & 3 */}
-        <path
-          d="M600 300 C 720 380, 820 380, 940 300"
-          stroke="#1E4C82"
-          strokeWidth="3"
-          strokeDasharray="6 10"
-          fill="none"
-          opacity="0.7"
-        />
-        {/* yellow chevron at the low point */}
-        <g transform="translate(780,334)">
-          <path d="M0 0 l-18 -10 l0 20 z" fill="#FAB029" />
-          <path d="M-22 0 l-18 -10 l0 20 z" fill="#FAB029" />
-        </g>
+        <svg
+          className="absolute inset-x-0 top-0 h-full w-full"
+          viewBox="0 0 1400 600"
+          preserveAspectRatio="none"
+        >
+          {/* Path 4: Top arc from card 3 to card 4 */}
+          <path
+            d="M 980 180 Q 1060 60 1140 180"
+            stroke="#1E4C82"
+            strokeWidth="2.5"
+            strokeDasharray="6 10"
+            fill="none"
+            opacity="0.8"
+          />
+          {/* Arrow 4: On top arc */}
+          <g transform="translate(1130,175) rotate(-30)">
+            <path d="M0 0 l-13 -8 l0 16 z" fill="#F5B800" />
+            <path d="M-17 0 l-13 -8 l0 16 z" fill="#F5B800" />
+          </g>
 
-        {/* 3) Top arc between card 3 & 4 */}
-        <path
-          d="M980 170 C 1100 100, 1240 100, 1360 170"
-          stroke="#1E4C82"
-          strokeWidth="3"
-          strokeDasharray="6 10"
-          fill="none"
-          opacity="0.7"
-        />
-        {/* yellow chevron on that arc */}
-        <g transform="translate(1340,170) rotate(-20)">
-          <path d="M0 0 l-18 -10 l0 20 z" fill="#FAB029" />
-          <path d="M-22 0 l-18 -10 l0 20 z" fill="#FAB029" />
-        </g>
-      </svg>
+          {/* Path 5: Right side curve near card 4 */}
+          <path
+            d="M 1040 400 Q 1120 500 1200 400"
+            stroke="#1E4C82"
+            strokeWidth="2.5"
+            strokeDasharray="6 10"
+            fill="none"
+            opacity="0.6"
+          />
+        </svg>
+      </div>
 
-      <div className="relative z-10 mx-auto mt-[48px] w-full max-w-[1200px] px-4">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="relative z-10 mx-auto mt-12 w-full max-w-[1240px] px-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {PRINCIPLES.map((p) => (
             <article
               key={p.title}
-              className="relative rounded-[12px] bg-[#E9F1E1] p-[18px] shadow-[0_6px_18px_rgba(0,0,0,0.25)]"
+              className="group relative rounded-xl bg-[#E9F1E1] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:bg-[#F4B350] transition-all duration-300 cursor-pointer"
             >
-              {/* tiny green pin above each card */}
-              <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-white p-1 shadow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#2A8C66" aria-hidden>
-                  <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z" />
-                </svg>
+              {/* Green pin icon above each card */}
+              <div className="absolute -top-5 left-1/2 z-10 -translate-x-1/2 rounded-full p-1.5">
+                <img src="/principles1.svg" alt="" width="28" height="28" />
               </div>
 
-              {/* green pill title */}
-              <div className="mx-auto mt-2 w-fit rounded-md bg-[#698E45] px-3 py-1.5 text-center text-white">
-                <span className="text-[15px] font-semibold">{p.title}</span>
+              {/* Green pill title - changes color on hover */}
+              <div className="mr-12 mt-4 w-[144px] rounded-lg bg-[#698E45] group-hover:bg-white  px-4 py-2 text-center  shadow-sm transition-colors duration-300">
+                <span className="text-base group-hover:text-[#F4B350] font-semibold text-white">{p.title}</span>
               </div>
 
-              {/* description */}
-              <p className="mx-auto mt-2 max-w-[270px] text-[15px] leading-[1.35] text-black">
+              {/* Description */}
+              <p className="mx-auto mt-3 text-center text-[15px] leading-relaxed text-gray-800  transition-colors duration-300">
                 {p.desc}
               </p>
 
-              {/* image (unchanged) */}
-              <img
-                src={p.img}
-                alt={p.title}
-                className="mt-4 h-[172px] w-full rounded-[10px] object-cover"
-              />
+              {/* Image with scale effect on hover */}
+              <div className="mt-4 overflow-hidden rounded-lg shadow-md">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="h-[180px] w-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
             </article>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-[34px] flex justify-center">
-          <button className="inline-flex items-center gap-3 rounded-full bg-[#197B55] px-6 py-3 font-medium text-white shadow-[0_6px_18px_rgba(0,0,0,0.25)]">
+        {/* CTA Button */}
+        <div className="mt-12 flex justify-center">
+          <Link 
+            to="/offerings"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#197B55] px-7 py-3.5 font-semibold text-white shadow-[0_8px_24px_rgba(25,123,85,0.35)] hover:bg-[#F4B350] hover:text-[#2C2C2C] hover:shadow-[0_8px_24px_rgba(244,179,80,0.35)] transition-all duration-300">
             <span>Explore Our Offerings</span>
-            <span className="grid h-6 w-6 place-items-center rounded-full bg-white">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#197B55" aria-hidden>
-                <path d="M13 5l7 7-7 7v-4H4v-6h9V5z" />
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-white group-hover:bg-[#2C2C2C] transition-all duration-300">
+              <svg 
+                width="20" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="#197B55" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+                className="group-hover:stroke-[#F4B350] transition-all duration-300"
+              >
+                <path d="M9 18l6-6-6-6" />
               </svg>
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

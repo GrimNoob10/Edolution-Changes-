@@ -1,53 +1,159 @@
-import React from 'react';
+import React from "react";
 
 const HeroSection: React.FC = () => {
+  const card =
+    "rounded-[20px] shadow-[0_6px_18px_rgba(0,0,0,0.12)] object-cover";
+
   return (
-    <section className="box-border relative w-full h-[930px] overflow-hidden m-0 p-0 max-md:h-auto max-md:px-5 max-md:py-10">
-      <div className="box-border relative w-full h-full m-0 p-0 max-md:grid max-md:grid-cols-[repeat(2,1fr)] max-md:gap-5 max-md:static max-sm:grid-cols-[1fr]">
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/ad17d766e47a3d2ea8ecb887d040a57f1afe6a8c?width=672"
-          alt="Education and learning environment"
-          className="box-border w-[336px] h-[447px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[552px] top-[423px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/ea333cb663a3c6f92a4d39c5cb952b58569db719?width=406"
-          alt="Skills development program"
-          className="box-border w-[203px] h-[268px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[918px] top-[423px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/eb877cdd4f47fc7226f3b881ce00d0c4381078fb?width=406"
-          alt="Professional training session"
-          className="box-border w-[203px] h-[268px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[319px] top-[602px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/887283382460caeb0268abc257b32af679a0ad84?width=406"
-          alt="Technology integration in education"
-          className="box-border w-[203px] h-[205px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[1151px] top-[587px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/2bd3fc46d8bfe0cb8144f24425ddc1f189787c8d?width=406"
-          alt="Community learning initiative"
-          className="box-border w-[203px] h-[205px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[86px] top-[587px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/9756d24e7926f48b370fe25addb6cfbba24b5ccd?width=406"
-          alt="Digital learning platform"
-          className="box-border w-[203px] h-[157px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[918px] top-[713px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-        <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/99e524b36b5aff160378b5fd676eb8eb963a33b4?width=406"
-          alt="Vocational training program"
-          className="box-border w-[203px] h-[157px] shadow-[0_6px_18px_0_rgba(0,0,0,0.12)] absolute m-0 p-0 rounded-[20px] left-[319px] top-[423px] max-md:static max-md:w-full max-md:h-auto max-md:max-w-[300px] max-md:justify-self-center"
-        />
-      </div>
-      <div className="box-border absolute w-[1368px] h-[162px] m-0 p-0 left-9 top-[201px] max-md:static max-md:w-full max-md:mt-10">
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                "<svg id=\"77:211\" width=\"1368\" height=\"162\" viewBox=\"0 0 1368 162\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"hero-text-svg\" style=\"margin: 0; padding: 0; box-sizing: border-box; width: 1368px; height: 162px\"> <path d=\"M903.455 122.86L893.398 130.368L890.382 117.295L879.628 125.325L876.613 112.246L865.999 120.333\" stroke=\"#19223F\" stroke-width=\"5.52222\" stroke-miterlimit=\"10\"></path> <path d=\"M905 120.608L894.943 128.116L891.927 115.043L881.173 123.073L878.158 110L867.544 118.081\" stroke=\"#698E45\" stroke-width=\"5.52222\" stroke-miterlimit=\"10\"></path> <text fill=\"#197B55\" xml:space=\"preserve\" style=\"white-space: pre\" font-family=\"Poppins\" font-size=\"36\" font-weight=\"bold\" letter-spacing=\"0px\"><tspan x=\"279.369\" y=\"39.6\">Learning</tspan><tspan x=\"533.232\" y=\"39.6\">Livelihoods</tspan><tspan x=\"969.117\" y=\"93.6\">Education</tspan><tspan x=\"499.799\" y=\"147.6\">Skilling</tspan></text> <text fill=\"#252525\" xml:space=\"preserve\" style=\"white-space: pre\" font-family=\"Poppins\" font-size=\"36\" font-weight=\"600\" letter-spacing=\"0px\"><tspan x=\"84.3926\" y=\"39.6\">We Bridge </tspan><tspan x=\"442.107\" y=\"39.6\"> And </tspan><tspan x=\"741.568\" y=\"39.6\"> Through </tspan><tspan x=\"369.316\" y=\"93.6\"> That Address Every Layer Of The </tspan><tspan x=\"1155.94\" y=\"93.6\"> And </tspan><tspan x=\"635.361\" y=\"147.6\"> Value Chain</tspan></text> <text fill=\"#197B55\" xml:space=\"preserve\" style=\"white-space: pre\" font-family=\"Poppins\" font-size=\"36\" font-weight=\"bold\" letter-spacing=\"0px\"><tspan x=\"912.814\" y=\"39.6\">Integrated Products </tspan><tspan x=\"129.516\" y=\"93.6\">And Services</tspan></text> </svg>",
-            }}
-          />
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* Background grid pattern */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Content wrapper */}
+      <div className="relative max-w-[1220px] mx-auto px-4 sm:px-6 md:px-8 py-20 md:py-28">
+        {/* Headline */}
+        <h1
+          className="text-center font-semibold leading-snug md:leading-tight text-[#252525] mx-auto max-w-[1100px]"
+          style={{ fontFamily: "Poppins, ui-sans-serif, system-ui" }}
+        >
+          <span className="text-[26px] sm:text-[30px] md:text-[36px] lg:text-[42px] font-semibold">
+            We Bridge{" "}
+            <span className="text-[#197B55] font-bold">Learning</span> And{" "}
+            <span className="text-[#197B55] font-bold">Livelihoods</span> Through{" "}
+            <span className="text-[#197B55] font-bold">
+              Integrated Products And Services
+            </span>{" "}
+            That Address Every Layer Of The{" "}
+            <span className="text-[#197B55] font-bold">Education</span> And{" "}
+            <span className="relative inline-flex items-center gap-2">
+              <span className="text-[#197B55] font-bold">Skilling</span>
+              {/* Zig-zag accent */}
+             
+            </span>{" "}
+            Value Chain
+             <svg
+                className="w-10 h-10 md:w-7 md:h-7 mb-6 inline-block"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 18L9 12L11 20L17 14L19 22L25 16"
+                  stroke="#19223F"
+                  strokeWidth="3"
+                  strokeMiterlimit="10"
+                />
+                <path
+                  d="M4 17L10 11L12 19L18 13L20 21L26 15"
+                  stroke="#698E45"
+                  strokeWidth="3"
+                  strokeMiterlimit="10"
+                />
+              </svg>
+          </span>
+        </h1>
+
+        {/* Spacing between text & images */}
+        <div className="mt-16 md:mt-20"></div>
+
+        {/* Collage Section */}
+        <div className="relative">
+          {/* Desktop Absolute Layout */}
+          <div className="hidden md:block relative h-[700px]">
+            {/* Center main image */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/ad17d766e47a3d2ea8ecb887d040a57f1afe6a8c?width=672"
+              alt="Workshop training"
+              className={`${card} absolute w-[420px] h-[560px] left-1/2 -translate-x-1/2 top-[70px]`}
+            />
+
+            {/* Right column */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/ea333cb663a3c6f92a4d39c5cb952b58569db719?width=406"
+              alt="Skills development program"
+              className={`${card} absolute w-[260px] h-[340px] right-[90px] top-[70px]`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/9756d24e7926f48b370fe25addb6cfbba24b5ccd?width=406"
+              alt="Digital learning platform"
+              className={`${card} absolute w-[260px] h-[200px] right-[90px] bottom-[20px]`}
+            />
+
+            {/* Far right */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/887283382460caeb0268abc257b32af679a0ad84?width=406"
+              alt="Technology integration"
+              className={`${card} absolute w-[260px] h-[260px] right-0 top-[180px]`}
+            />
+
+            {/* Left column */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/99e524b36b5aff160378b5fd676eb8eb963a33b4?width=406"
+              alt="Computer classroom"
+              className={`${card} absolute w-[260px] h-[200px] left-[90px] top-[70px]`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/eb877cdd4f47fc7226f3b881ce00d0c4381078fb?width=406"
+              alt="Professional training session"
+              className={`${card} absolute w-[260px] h-[340px] left-[90px] bottom-[20px]`}
+            />
+
+            {/* Far left */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/2bd3fc46d8bfe0cb8144f24425ddc1f189787c8d?width=406"
+              alt="Community learning"
+              className={`${card} absolute w-[260px] h-[260px] left-0 top-[180px]`}
+            />
+          </div>
+
+          {/* Mobile Grid */}
+          <div className="md:hidden grid grid-cols-2 gap-4 mt-4">
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/99e524b36b5aff160378b5fd676eb8eb963a33b4?width=406"
+              alt="Computer classroom"
+              className={`${card} w-full h-40`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/ea333cb663a3c6f92a4d39c5cb952b58569db719?width=406"
+              alt="Skills development"
+              className={`${card} w-full h-52`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/2bd3fc46d8bfe0cb8144f24425ddc1f189787c8d?width=406"
+              alt="Community learning"
+              className={`${card} w-full h-44`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/ad17d766e47a3d2ea8ecb887d040a57f1afe6a8c?width=672"
+              alt="Workshop training"
+              className={`${card} col-span-2 w-full h-[340px]`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/eb877cdd4f47fc7226f3b881ce00d0c4381078fb?width=406"
+              alt="Professional training"
+              className={`${card} w-full h-52`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/887283382460caeb0268abc257b32af679a0ad84?width=406"
+              alt="Technology integration"
+              className={`${card} w-full h-44`}
+            />
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/9756d24e7926f48b370fe25addb6cfbba24b5ccd?width=406"
+              alt="Digital learning"
+              className={`${card} col-span-2 w-full h-40`}
+            />
+          </div>
         </div>
       </div>
     </section>

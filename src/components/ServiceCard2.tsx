@@ -9,59 +9,23 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  iconSvg,
-  decorationSvg,
-  className = "",
-}) => {
-  return (
-    <article className={`box-border w-80 h-80 shadow-[0_6px_18px_0_rgba(0,0,0,0.10)] relative bg-white m-0 p-0 rounded-[10px] max-md:w-full max-md:max-w-xs max-md:justify-self-center max-sm:h-auto max-sm:pb-5 ${className}`}>
-      <div className="box-border w-[60px] h-[60px] absolute m-0 p-0 left-[18px] top-[18px]">
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                "<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"service-icon-bg\" style=\"margin: 0; padding: 0; box-sizing: border-box; width: 60px; height: 60px; position: absolute; left: 0; top: 0\"> <circle cx=\"30\" cy=\"30\" r=\"30\" fill=\"#E9F1E1\"></circle> </svg>",
-            }}
-          />
-        </div>
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: iconSvg,
-            }}
-          />
-        </div>
-      </div>
-      <div className="box-border flex w-[284px] flex-col items-start gap-3 absolute m-0 p-0 left-[18px] top-[90px] max-sm:w-[calc(100%_-_36px)] max-sm:static max-sm:mt-[90px] max-sm:mb-[18px] max-sm:mx-[18px]">
-        <h3 className="box-border text-[#698E45] text-lg font-semibold m-0 p-0">
-          {title}
-        </h3>
-        <div className="box-border w-[284px] h-[0.8px] bg-[#252525] m-0 p-0" />
-        <p className="box-border text-[#545454] text-base font-normal m-0 p-0">
-          {description}
-        </p>
-      </div>
-      <div className="box-border absolute right-[-62px] bottom-[-87px] m-0 p-0 max-sm:hidden">
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                "<svg width=\"79\" height=\"87\" viewBox=\"0 0 79 87\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"service-decoration-bg\" style=\"margin: 0; padding: 0; box-sizing: border-box; width: 124px; height: 124px; position: absolute; left: 0; top: 0\"> <circle cx=\"62\" cy=\"62\" r=\"62\" fill=\"#E9F1E1\"></circle> </svg>",
-            }}
-          />
-        </div>
-        <div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: decorationSvg,
-            }}
-          />
-        </div>
-      </div>
-    </article>
-  );
-};
+  title, description, iconSvg, decorationSvg, className = "",
+}) => (
+  <article className={`relative bg-white rounded-[16px] shadow-[0_6px_24px_0_rgba(0,0,0,0.09)] py-8 px-7 w-[360px] h-[300px] flex flex-col justify-between ${className}`}>
+    {/* Icon with background */}
+    <div className="absolute left-6 top-6 z-10">
+      <span className="inline-block w-10 h-10 rounded-full bg-[#E9F1E1] relative z-0">
+        <span className="absolute z-10 left-[8px] top-[8px]" dangerouslySetInnerHTML={{ __html: iconSvg }}/>
+      </span>
+    </div>
+    <div className="flex flex-col pl-[4px] pt-[58px] pr-[6px]">
+      <h3 className="font-semibold text-[#3D733F] text-[1.11rem] leading-[1.3] mb-2">{title}</h3>
+      <div className="border-b border-[#DEE5D6] w-[90%] mb-3"/>
+      <p className="text-[#555] leading-[1.7] tracking-[-0.01em] text-[15px]">{description}</p>
+    </div>
+    {/* Decoration SVG */}
+    <div className="absolute right-0 bottom-0 z-0">{decorationSvg && (<span dangerouslySetInnerHTML={{ __html: decorationSvg }}/>)}</div>
+  </article>
+);
 
 export default ServiceCard;
