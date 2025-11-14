@@ -27,44 +27,44 @@ export function SkillCertification() {
     title: "Driving Workforce Readiness & Business Impact",
     titleHighlights: ["Workforce", "Business"],
     subtitle: "Empower Businesses And Governments To Build A Skilled, Certified Workforce.",
-    description: "The Skill Certification Platform Bridges This Gap By Digitizing The Entire Certification Lifecycle — From Eligibility Checks To Assessment, Issuance, And Verification — Through A Single, Scalable Solution"
+    description: "The Skill Certification Platform Bridges This Gap By Digitizing The Entire Certification Lifecycle — From Eligibility Checks To Assessment, Issuance, And Verification — Through A Single, Scalable Solution",
+    color: "#197b55",
   };
 
   const valuePropositionData = {
     title: "Value Proposition",
     titleHighlight: "Business",
     titleIcon: "images/skillCertification/Business Value Proposition 01.svg",
-    accentColor: "#698e45",
     backgroundColor: "#ffffff",
     iconBackgroundColor: "#698e45",
     hoverBackgroundColor: "#DDEDFE",
     hoverIconBackgroundColor: "#064789",
-    titleColor: "#698e45",
     hoverTitleColor: "#064789",
     borderColor: "#DDEDFE",
     hoverBorderColor: "#064789",
     textColor: "#698e45",
     hoverTextColor: "#064789",
+    blobColor: "#698e45",
     hoverBlobColor: "#064789",
     hoverIconFilter: "#ffffff",
     cards: [
       {
-        icon: "images/skillCertification/Business Value Proposition 02.svg",
+        icon: "images/skillCertification/Business Value Proposition 01.svg",
         title: "Faster Credentialing",
         description: "Cut certification time from weeks to hours",
       },
       {
-        icon: "images/skillCertification/Business Value Proposition 03.svg",
+        icon: "images/skillCertification/Business Value Proposition 02.svg",
         title: "Scalable Operations",
         description: "Manage enterprise or national programs on one platform",
       },
       {
-        icon: "images/skillCertification/Business Value Proposition 04.svg",
+        icon: "images/skillCertification/Business Value Proposition 03.svg",
         title: "Verified Skills",
         description: "Issue tamper-proof, trackable digital certificates",
       },
       {
-        icon: "images/skillCertification/Business Value Proposition 05.svg",
+        icon: "images/skillCertification/Business Value Proposition 04.svg",
         title: "Actionable Insights",
         description:
           "Use real-time analytics to identify skill gaps and performance trends",
@@ -186,7 +186,6 @@ export function SkillCertification() {
     hoverBackgroundColor: "#DDEDFE",
     hoverTextColor: "#064789",
     hoverTitleColor: "#064789",
-    titleColor: "#698E45",
     borderColor: "#064789",
     textColor: "#698E45",
     cards: [
@@ -251,7 +250,7 @@ export function SkillCertification() {
           </div>
         </section>
 
-      
+
       </div>
 
       <Footer />

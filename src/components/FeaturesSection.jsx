@@ -4,7 +4,7 @@ export function FeaturesSection({
   title, 
   titleHighlight, 
   features,
-  accentColor,
+  accentColor = "#197b55",
   accentColorB
 }) {
   return (
@@ -37,7 +37,7 @@ export function FeaturesSection({
                   />
                 </div>
               </div>
-              <hr className="feature-card-sep" />
+              <hr className="feature-card-sep" style={{borderColor:accentColor}}/>
               <div className="feature-description">
                 {feature.description}
               </div>

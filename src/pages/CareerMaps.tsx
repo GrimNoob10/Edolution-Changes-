@@ -49,6 +49,7 @@ export function CareerMaps() {
     hoverBorderColor: "#698e45",
     textColor: "#698e45",
     hoverTextColor: "#FAB029",
+    blobColor: "#698e45",
     hoverBlobColor: "#FAB029",
     hoverIconFilter: "",
     cards: [
@@ -197,9 +198,9 @@ export function CareerMaps() {
         <Header />
 
         <PlatformPreviewSection
-          title="Skill Certification Platform"
-          titleHighlight="Skill Certification"
-          subtitle="Certify Skills With Speed, Scale, And Trust."
+          title="Career Maps"
+          titleHighlight="Career"
+          subtitle="Visualizing Skills. Enabling Smarter Workforce Planning."
           previewImage="images/careerMaps/Career Maps Image 01.png"
           titleColor="#197b55"
           backgroundColor="#FAB029"
@@ -212,54 +213,158 @@ export function CareerMaps() {
 
         <FeaturesSection {...featuresData} />
 
-        <UseCasesSection {...(useCasesData||{})} />
+        <UseCasesSection {...(useCasesData || {})} />
 
         <section className="why-section">
           <div className="section-container">
             <h2 className="section-title text-black relative">
-  <span className="text-green">Why</span> It Matters
-  <span
-    className="trend-icon"
-    style={{
-      position: "absolute",
-      right: "506px", // adjust px for perfect alignment
-      top: "-22px",   // adjust px for perfect alignment
-      zIndex: 5,
-    }}
-  >
-    <svg
-      width="44"
-      height="28"
-      viewBox="0 0 43 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M39.1289 17.6466L29.0715 25.1546L26.0559 12.0816L15.3022 20.1119L12.2866 7.03326L1.67326 15.1196"
-        stroke="#19223F"
-        strokeWidth="5.5"
-        strokeMiterlimit="10"
-      />
-      <path
-        d="M40.6738 15.3948L30.6164 22.9028L27.6009 9.82981L16.8471 17.86L13.8315 4.78705L3.21818 12.8678"
-        stroke="#698E45"
-        strokeWidth="5.5"
-        strokeMiterlimit="10"
-      />
-    </svg>
-  </span>
-</h2>
+              <span className="text-green">Why</span> It Matters
+              <span
+                className="trend-icon"
+                style={{
+                  position: "absolute",
+                  right: "506px", // adjust px for perfect alignment
+                  top: "-22px", // adjust px for perfect alignment
+                  zIndex: 5,
+                }}
+              >
+                <svg
+                  width="44"
+                  height="28"
+                  viewBox="0 0 43 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M39.1289 17.6466L29.0715 25.1546L26.0559 12.0816L15.3022 20.1119L12.2866 7.03326L1.67326 15.1196"
+                    stroke="#19223F"
+                    strokeWidth="5.5"
+                    strokeMiterlimit="10"
+                  />
+                  <path
+                    d="M40.6738 15.3948L30.6164 22.9028L27.6009 9.82981L16.8471 17.86L13.8315 4.78705L3.21818 12.8678"
+                    stroke="#698E45"
+                    strokeWidth="5.5"
+                    strokeMiterlimit="10"
+                  />
+                </svg>
+              </span>
+            </h2>
 
             <p className="why-text">
-              The Skill Certification Platform Transforms Fragmented Processes
-              Into A Unified Ecosystem — Enabling Verified Credentials,
-              Measurable Impact, And True Workforce Transformation
+              Offers an interactive visual model of how careers evolve and
+              skills connect.
             </p>
+
+            <div
+              className="green-box"
+              style={{
+                backgroundColor: "#E9F1E1", // Light green background
+                padding: "30px",
+                borderRadius: "10px",
+                border: "1px solid #7DCC78", // A slightly darker green border for definition
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Optional shadow for depth
+                margin: "30px auto 0",
+                maxWidth: "800px", // Adjust max-width as needed
+              }}
+            >
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <li
+                  style={{
+                    marginBottom: "20px",
+                    display: "flex",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <span
+                    style={{
+                      marginRight: "10px",
+                      color: "#e40505ff",
+                      fontSize: "18px",
+                    }}
+                  >
+                    <img
+                      src="public\images\careerMaps\Why It Matters 01.svg"
+                      alt=""
+                    />
+                  </span>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: "18px",
+                      lineHeight: "1.5",
+                      color: "#698E45",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <strong style={{ color: "#197b55" }}>Individuals</strong> To
+                    Discover And Plan Career Growth Opportunities
+                  </p>
+                </li>
+                <li
+                  style={{
+                    marginBottom: "20px",
+                    display: "flex",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <span
+                    style={{
+                      marginRight: "10px",
+                      color: "#698E45",
+                      fontSize: "1.5em",
+                    }}
+                  >
+                    <img
+                      src="public\images\careerMaps\Why It Matters 01.svg"
+                      alt=""
+                    />
+                  </span>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: "18px",
+                      lineHeight: "1.5",
+                      color: "#698E45",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <strong style={{ color: "#197b55" }}>Employers</strong> To
+                    Identify Transferable Skills And Design Better Talent
+                    Pipelines.
+                  </p>
+                </li>
+                <li style={{ display: "flex", alignItems: "flex-start" }}>
+                  <span
+                    style={{
+                      marginRight: "10px",
+                      color: "#698E45",
+                      fontSize: "1.5em",
+                    }}
+                  >
+                    <img
+                      src="public\images\careerMaps\Why It Matters 01.svg"
+                      alt=""
+                    />
+                  </span>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: "18px",
+                      lineHeight: "1.5",
+                      color: "#698E45",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <strong style={{ color: "#197b55" }}>Policymakers</strong>{" "}
+                    To Develop Data-Informed Workforce And Training Strategies.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
-
-    
       </div>
 
       <Footer />

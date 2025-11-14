@@ -47,7 +47,8 @@ export function LearningPlatform() {
     hoverBorderColor: "#698e45",
     textColor: "#698e45",
     hoverTextColor: "#ffffff",
-    hoverBlobColor: "#fffffff",
+    blobColor:"#698e45",
+    hoverBlobColor: "#ffffff",
     hoverIconFilter: "",
     cards: [
       {
@@ -229,7 +230,7 @@ export function LearningPlatform() {
 
         <PlatformPreviewSection
           title="AI-Powered Learning Platform"
-          titleHighlight="AI-"
+          titleHighlights={["AI-", "Learning"]}
           subtitle="Accelerating Workforce Capability Through Smart Learning."
           previewImage="images/learningPlatform/LUME-1-Dashboard.png"
           titleColor="#197b55"
@@ -249,11 +250,11 @@ export function LearningPlatform() {
           <div className="section-container">
             <h2 className="section-title text-black">
               <span className="trend-icon "><svg className="w-[44px] md:ml-[850px]  h-[28px]" viewBox="0 0 43 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M39.1289 17.6466L29.0715 25.1546L26.0559 12.0816L15.3022 20.1119L12.2866 7.03326L1.67326 15.1196" stroke="#19223F" strokeWidth="5.5" strokeMiterlimit="10"/>
-    <path d="M40.6738 15.3948L30.6164 22.9028L27.6009 9.82981L16.8471 17.86L13.8315 4.78705L3.21818 12.8678" stroke="#698E45" strokeWidth="5.5" strokeMiterlimit="10"/>
-  </svg></span>
-              <span style={{color: "#197b55"}}>Why</span> It Matters
-              
+                <path d="M39.1289 17.6466L29.0715 25.1546L26.0559 12.0816L15.3022 20.1119L12.2866 7.03326L1.67326 15.1196" stroke="#19223F" strokeWidth="5.5" strokeMiterlimit="10" />
+                <path d="M40.6738 15.3948L30.6164 22.9028L27.6009 9.82981L16.8471 17.86L13.8315 4.78705L3.21818 12.8678" stroke="#698E45" strokeWidth="5.5" strokeMiterlimit="10" />
+              </svg></span>
+              <span style={{ color: "#197b55" }}>Why</span> It Matters
+
             </h2>
             <p className="why-text">
               By Uniting AI, Automation, And Analytics, It Empowers

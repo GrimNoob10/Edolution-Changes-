@@ -5,7 +5,7 @@ export function ValuePropositionSection({
   titleHighlight,
   titleIcon,
   cards,
-  accentColor,
+  accentColor = "#197b55",
   showBlob = true,
   backgroundColor,
   iconBackgroundColor,
@@ -16,6 +16,7 @@ export function ValuePropositionSection({
   textColor,
   hoverTextColor,
   hoverBlobColor,
+  blobColor,
   hoverIconFilter,
 }) {
   return (
@@ -44,7 +45,7 @@ export function ValuePropositionSection({
                 "--hover-title-color": hoverTitleColor,
                 "--text-color": textColor,
                 "--hover-text-color": hoverTextColor,
-                "--blob-color": accentColor,
+                "--blob-color": blobColor,
                 "--hover-blob-color": hoverBlobColor,
                 "--icon-filter": "none",
                 "--hover-icon-filter": hoverIconFilter || "none",
@@ -54,6 +55,11 @@ export function ValuePropositionSection({
                 <img src={card.icon} alt={card.title} />
               </div>
               <h4 className="value-heading">{card.title}</h4>
+              <hr
+                className="feature-card-sep"
+                style={{ borderColor: accentColor , width:200}}
+              />
+
               <p className="value-text">{card.description}</p>
               {showBlob && <div className="blob"></div>}
             </div>

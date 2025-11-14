@@ -8,8 +8,7 @@ export const Header: React.FC = () => {
   const [desktopProductsOpen, setDesktopProductsOpen] = useState(false);
 
   const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
-    `px-4 py-2 rounded-full font-medium transition-colors duration-200 ${
-      isActive ? "bg-[#197B55] text-white" : "text-[#252525] hover:text-[#197B55]"
+    `px-4 py-2 rounded-full font-medium transition-colors duration-200 ${isActive ? "bg-[#197B55] text-white" : "text-[#252525] hover:text-[#197B55]"
     }`;
 
   return (
@@ -26,8 +25,8 @@ export const Header: React.FC = () => {
         />
       </Helmet>
 
-      <header className="bg-white w-full py-4 md:py-8 sticky top-0 z-150">
-       <div className="flex items-center gap-6 max-w-[1200px] mx-12 px-0">
+      <header className="bg-white w-full py-4 md:py-8 sticky top-0 z-50">
+        <div className="flex items-center gap-6 max-w-[1200px] mx-12 px-0">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0 ml-0 ">
             <img
@@ -56,7 +55,7 @@ export const Header: React.FC = () => {
             </NavLink>
 
             {/* Products dropdown (desktop) with state management */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setDesktopProductsOpen(true)}
               onMouseLeave={() => setDesktopProductsOpen(false)}
@@ -79,47 +78,43 @@ export const Header: React.FC = () => {
               </NavLink>
 
               {/* Dropdown */}
-             {/* Dropdown */}
-<div
-  className={`absolute left-0 z-50 top-full pt-2 transition-all duration-200 ${
-    desktopProductsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
-  }`}
->
-  <div className="bg-white rounded-xl shadow-lg p-2 min-w-[220px]">
-    <NavLink
-      to="/skill-certification"
-      className={({ isActive }) =>
-        `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${
-          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
-        }`
-      }
-    >
-      Skill Certification Platform
-    </NavLink>
-    <div className="border-t border-[#197B55] my-2"></div>
-    <NavLink
-      to="/aipowered-learning-platform"
-      className={({ isActive }) =>
-        `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${
-          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
-        }`
-      }
-    >
-      AI-Powered Learning Platform
-    </NavLink>
-    <div className="border-t border-[#197B55] my-2"></div>
-    <NavLink
-      to="/career-maps"
-      className={({ isActive }) =>
-        `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${
-          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
-        }`
-      }
-    >
-      Career Maps
-    </NavLink>
-  </div>
-</div>
+              {/* Dropdown */}
+              <div
+                className={`absolute left-0 top-full pt-2 transition-all duration-200 ${desktopProductsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+                  }`}
+              >
+                <div className="bg-white rounded-xl shadow-lg p-2 min-w-[220px]">
+                  <NavLink
+                    to="/skill-certification"
+                    className={({ isActive }) =>
+                      `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
+                      }`
+                    }
+                  >
+                    Skill Certification Platform
+                  </NavLink>
+                  <div className="border-t border-[#197B55] my-2"></div>
+                  <NavLink
+                    to="/aipowered-learning-platform"
+                    className={({ isActive }) =>
+                      `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
+                      }`
+                    }
+                  >
+                    AI-Powered Learning Platform
+                  </NavLink>
+                  <div className="border-t border-[#197B55] my-2"></div>
+                  <NavLink
+                    to="/career-maps"
+                    className={({ isActive }) =>
+                      `block px-4 py-2.5 text-[15px] rounded-lg transition-colors whitespace-nowrap ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-[#E9F1E1]"
+                      }`
+                    }
+                  >
+                    Career Maps
+                  </NavLink>
+                </div>
+              </div>
 
             </div>
 
@@ -153,9 +148,8 @@ export const Header: React.FC = () => {
 
         {/* Mobile Nav Panel */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            menuOpen ? "max-h-[600px] mt-3" : "max-h-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[600px] mt-3" : "max-h-0"
+            }`}
         >
           <div className="bg-[#E9F1E1] rounded-2xl p-2">
             <div className="flex flex-col gap-2">
@@ -163,8 +157,7 @@ export const Header: React.FC = () => {
                 to="/"
                 end
                 className={({ isActive }) =>
-                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${
-                    isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
+                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -175,8 +168,7 @@ export const Header: React.FC = () => {
               <NavLink
                 to="/offerings"
                 className={({ isActive }) =>
-                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${
-                    isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
+                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -187,8 +179,7 @@ export const Header: React.FC = () => {
               <NavLink
                 to="/clients"
                 className={({ isActive }) =>
-                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${
-                    isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
+                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -199,8 +190,7 @@ export const Header: React.FC = () => {
               <NavLink
                 to="/projects"
                 className={({ isActive }) =>
-                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${
-                    isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
+                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -228,16 +218,14 @@ export const Header: React.FC = () => {
 
                 <div
                   id="mobile-products"
-                  className={`transition-all duration-300 overflow-hidden ${
-                    mobileProductsOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`transition-all duration-300 overflow-hidden ${mobileProductsOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                   <div className="py-2 space-y-1">
                     <NavLink
                       to="aipowered-learning-platform"
                       className={({ isActive }) =>
-                        `block px-6 py-2.5 rounded-lg transition-colors ${
-                          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
+                        `block px-6 py-2.5 rounded-lg transition-colors ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
                         }`
                       }
                       onClick={() => {
@@ -250,8 +238,7 @@ export const Header: React.FC = () => {
                     <NavLink
                       to="/skill-certification"
                       className={({ isActive }) =>
-                        `block px-6 py-2.5 rounded-lg transition-colors ${
-                          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
+                        `block px-6 py-2.5 rounded-lg transition-colors ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
                         }`
                       }
                       onClick={() => {
@@ -264,8 +251,7 @@ export const Header: React.FC = () => {
                     <NavLink
                       to="/career-maps"
                       className={({ isActive }) =>
-                        `block px-6 py-2.5 rounded-lg transition-colors ${
-                          isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
+                        `block px-6 py-2.5 rounded-lg transition-colors ${isActive ? "text-[#197B55] bg-[#E9F1E1] font-semibold" : "text-[#252525] hover:bg-white/60"
                         }`
                       }
                       onClick={() => {
@@ -282,8 +268,7 @@ export const Header: React.FC = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${
-                    isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
+                  `block w-full text-left rounded-xl px-4 py-3 font-medium ${isActive ? "bg-[#197B55] text-white" : "text-[#252525]"
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
